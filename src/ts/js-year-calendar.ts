@@ -707,6 +707,9 @@ export default class Calendar<T extends CalendarDataSourceElement> {
 					this.options.customDataSourceRenderer.call(this, elt, currentDate, events);
 				}
 				break;
+			case 'textColor':
+				parent.style.color = events[events.length - 1].textColor;
+			break;
 		}
 	}
 
