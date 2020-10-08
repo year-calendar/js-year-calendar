@@ -653,7 +653,10 @@ export default class Calendar<T extends CalendarDataSourceElement> {
 		
 			case 'background':
 				parent.style.backgroundColor = events[events.length - 1].color;
-				
+
+				if(events[events.length - 1].textColor) {
+                    parent.style.color = events[events.length - 1].textColor;
+                }
 				var currentTime = currentDate.getTime();
 				
 				if (events[events.length - 1].startDate.getTime() == currentTime)

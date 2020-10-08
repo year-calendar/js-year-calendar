@@ -11,7 +11,11 @@ export default interface CalendarDataSourceElement {
      * The color of the element. This property will be computed automatically if not defined.
      */
     color?: string;
-	
+    
+    /**
+     * The text color of event
+     */
+    textColor?: string;
     /**
      * The date of the beginning of the element range.
      */
